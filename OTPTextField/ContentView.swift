@@ -10,7 +10,17 @@ import CoreData
 
 struct ContentView: View {
     var body: some View {
-        OTPVerificationView()
+        if #available(iOS 15, *) {
+            OTPVerificationView()
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarHidden(true)
+        } else {
+            NavigationStack {
+                OTPVerificationView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar(.hidden, for: .navigationBar)
+            }
+        }
     }
 }
 struct ContentView_Previews: PreviewProvider {

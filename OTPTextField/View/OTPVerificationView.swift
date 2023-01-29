@@ -25,11 +25,17 @@ struct OTPVerificationView: View {
                 }
             }.background(content: {
                 TextField("", text: $otpText.limit(6))
+                    .keyboardType(.numberPad)
+                    .textContentType(.oneTimeCode)
                     .frame(width: 1, height: 1)
                     .opacity(0.001)
                     .blendMode(.screen)
                     .focused($isKeyboardShowing)
             })
+                .contentShape(Rectangle())
+                .onTapGesture {
+                isKeyboardShowing.toggle()
+            }
                 .padding(.bottom, 20)
                 .padding(.top, 10)
 
@@ -51,6 +57,14 @@ struct OTPVerificationView: View {
 
         }.padding(.all)
             .frame(maxHeight: .infinity, alignment: .top)
+            .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                Button("Done") {
+                    isKeyboardShowing.toggle()
+                }
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+        }
 
     }
 
@@ -70,9 +84,12 @@ struct OTPVerificationView: View {
             }
         }.frame(width: 45, height: 45)
             .background {
+            let status = (isKeyboardShowing && otpText.count == index)
 
             RoundedRectangle(cornerRadius: 6, style: .continuous)
-                .stroke(.gray, lineWidth: 0.5)
+                .stroke(status ? .black : .gray, lineWidth: status ? 1 : 0.5)
+
+                .animation(.easeOut(duration: 0.2), value: status)
 
         }
             .frame(maxWidth: .infinity)
