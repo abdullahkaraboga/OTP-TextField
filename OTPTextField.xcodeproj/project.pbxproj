@@ -16,6 +16,7 @@
 		7BDABB352986E72E00D35658 /* OTPTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDABB342986E72E00D35658 /* OTPTextFieldTests.swift */; };
 		7BDABB3F2986E72E00D35658 /* OTPTextFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDABB3E2986E72E00D35658 /* OTPTextFieldUITests.swift */; };
 		7BDABB412986E72E00D35658 /* OTPTextFieldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDABB402986E72E00D35658 /* OTPTextFieldUITestsLaunchTests.swift */; };
+		7BDABB4F2986E77F00D35658 /* OTPVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDABB4E2986E77F00D35658 /* OTPVerificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		7BDABB3A2986E72E00D35658 /* OTPTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTPTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BDABB3E2986E72E00D35658 /* OTPTextFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldUITests.swift; sourceTree = "<group>"; };
 		7BDABB402986E72E00D35658 /* OTPTextFieldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextFieldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BDABB4E2986E77F00D35658 /* OTPVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		7BDABB1D2986E72B00D35658 /* OTPTextField */ = {
 			isa = PBXGroup;
 			children = (
+				7BDABB4D2986E74300D35658 /* View */,
 				7BDABB1E2986E72B00D35658 /* OTPTextFieldApp.swift */,
 				7BDABB202986E72B00D35658 /* ContentView.swift */,
 				7BDABB222986E72E00D35658 /* Assets.xcassets */,
@@ -131,6 +134,14 @@
 				7BDABB402986E72E00D35658 /* OTPTextFieldUITestsLaunchTests.swift */,
 			);
 			path = OTPTextFieldUITests;
+			sourceTree = "<group>";
+		};
+		7BDABB4D2986E74300D35658 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BDABB4E2986E77F00D35658 /* OTPVerificationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BDABB282986E72E00D35658 /* Persistence.swift in Sources */,
+				7BDABB4F2986E77F00D35658 /* OTPVerificationView.swift in Sources */,
 				7BDABB2B2986E72E00D35658 /* OTPTextField.xcdatamodeld in Sources */,
 				7BDABB212986E72B00D35658 /* ContentView.swift in Sources */,
 				7BDABB1F2986E72B00D35658 /* OTPTextFieldApp.swift in Sources */,
